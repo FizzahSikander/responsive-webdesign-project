@@ -2,15 +2,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 810px;
     max-width: 1440px;
     background-color: black;
     align-items: flex-start;
     margin: 50px;
-}
-
-nav {
-    width: 100%;
 }
 
 main {
@@ -81,7 +76,6 @@ nav {
 }
 
 .main-title {
-    min-height: 102px;
     max-width: 366px;
     font-family: 'Poppins';
     font-style: normal;
@@ -96,7 +90,6 @@ nav {
 
 .main-info {
     max-width: 410px;
-    min-height: 98px;
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
@@ -109,11 +102,6 @@ nav {
 
 .pic {
     max-width: 585px;
-    min-height: 690px;
-}
-
-.fa-solid fa-circle {
-    display: none;
 }
 
 @media screen and (max-width: 768px)and (min-height:1024px) {
@@ -124,8 +112,24 @@ nav {
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 50px;
     }
 
+    body {
+        margin: 0px;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logo {
+        margin-left: 0px;
+    }
 }
 
 
@@ -154,5 +158,9 @@ nav {
 
     .logo {
         margin-left: 0px;
+    }
+
+    body {
+        margin-top: 0px;
     }
 }
