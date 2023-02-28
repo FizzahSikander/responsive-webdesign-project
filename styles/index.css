@@ -9,8 +9,15 @@ body {
     margin: 50px;
 }
 
+nav {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
 header {
-    max-width: 1400px;
     min-height: 90px;
     width: 100%;
     display: flex;
@@ -27,17 +34,20 @@ header {
     /* identical to box height, or 150% */
     letter-spacing: -0.25px;
     color: #FFFFFF;
+    margin-left: 100px;
 }
 
 nav {
-    margin-left: 78px;
+    margin-left: 70px;
+    display: flex;
+    width: 100%;
 }
 
 .nav__list {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .nav__li {
@@ -62,6 +72,9 @@ nav {
 
 .first-container {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     max-height: 690px;
@@ -97,7 +110,6 @@ nav {
 .pic {
     max-width: 585px;
     min-height: 690px;
-    margin-left: 50px;
 }
 
 .fa-solid fa-circle {
@@ -107,47 +119,27 @@ nav {
 @media screen and (max-width: 768px)and (min-height:1024px) {
     .first-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         width: 100%;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
-        padding-right: 50px;
-
     }
 
-    header {
-        justify-content: space-between;
-    }
-
-    .nav {
-        margin-right: 50px;
-    }
 }
 
+
 @media screen and (max-width:320px)and (min-height:568px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .first-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        padding-right: 50px;
-
-    }
-
-    header {
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
     }
 
@@ -158,5 +150,9 @@ nav {
 
     .nav__li {
         display: none;
+    }
+
+    .logo {
+        margin-left: 0px;
     }
 }
