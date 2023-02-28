@@ -115,6 +115,11 @@ nav {
         margin-top: 50px;
     }
 
+    .nav {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
     body {
         margin: 0px;
     }
