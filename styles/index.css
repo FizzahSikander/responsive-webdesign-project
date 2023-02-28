@@ -5,8 +5,8 @@ body {
     max-width: 1440px;
     min-height: 810px;
     background-color: black;
-    margin: 50px;
     align-items: flex-start;
+    margin-left: 50px ;
 }
 
 .header {
@@ -95,5 +95,30 @@ nav {
 
 .pic {
     max-width: 585px;
-    min-width: 690px;
+    min-height: 690px;
+}
+
+@media screen and (max-width: 768px)and (min-height:1024px) {
+    .first-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav__li{
+    flex-direction: row;
+    justify-content: center;
+}
+.header{
+    justify-content: center;
+}
 }
