@@ -15,9 +15,8 @@ main {
 header {
     min-height: 90px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .logo {
@@ -29,16 +28,16 @@ header {
     /* identical to box height, or 150% */
     letter-spacing: -0.25px;
     color: #FFFFFF;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
-nav {
+.topnav {
     margin-left: 70px;
     display: flex;
     width: 100%;
 }
 
-.nav__list {
+.topnav {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -61,9 +60,6 @@ nav {
     color: blanchedalmond;
 }
 
-.nav__lu {
-    display: none;
-}
 
 .first-container {
     display: flex;
@@ -104,6 +100,33 @@ nav {
     max-width: 585px;
 }
 
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: gray;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
 @media screen and (max-width: 768px)and (min-height:1024px) {
     .first-container {
         display: flex;
@@ -115,27 +138,57 @@ nav {
         margin-top: 50px;
     }
 
-    .nav {
-        justify-content: space-between;
+    .topnav {
         flex-direction: row;
-    }
-
-    body {
-        margin: 0px;
-    }
-
-    header {
-        width: 100%;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .logo {
-        margin-left: 0px;
+        justify-content: center;
+        margin-right: 50px;
     }
 }
+
+body {
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    margin-left: 0px;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: gray;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
 
 
 @media screen and (max-width:320px)and (min-height:568px) {
@@ -152,20 +205,51 @@ nav {
         width: 100%;
     }
 
-    .nav__lu {
-        display: flex;
-        margin-left: 15px;
-    }
-
-    .nav__li {
-        display: none;
-    }
-
     .logo {
         margin-left: 0px;
     }
 
+    .main-info {
+        margin-top: 0px;
+        margin-left: 50px
+    }
+
+
+    .main-title {
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+
+    .topnav {
+        justify-content: flex-end;
+    }
+
     body {
         margin-top: 0px;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
     }
 }

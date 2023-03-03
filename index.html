@@ -19,17 +19,13 @@
         <div>
             <h3 class="logo">Head<span class="dott">.</span></h3>
         </div>
-        <div>
-            <nav>
-                <ul class="nav__list">
-                    <li><a class="nav__li" href="">Works</a></li>
-                    <li><a class="nav__li" href="">Services</a></li>
-                    <li><a class="nav__li" href="">Contacts</a></li>
-                    <li><a class="nav__lu" href=""><i class="fa-regular fa-circle"></i></a></li>
-                    <li><a class="nav__lu" href=""><i class="fa-regular fa-circle"></i></a></li>
-                    <li><a class="nav__lu" href=""><i class="fa-regular fa-circle"></i></a></li>
-                </ul>
-            </nav>
+        <div class="topnav" id="myTopnav">
+            <a class="nav__li" href="">Works</a>
+            <a class="nav__li" href="">Services</a>
+            <a class="nav__li" href="">Contacts</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </header>
     <main class="first-container">
@@ -43,7 +39,16 @@
             <img src="images/a man.jpg" alt="picture of a man">
         </div>
     </main>
-
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>
